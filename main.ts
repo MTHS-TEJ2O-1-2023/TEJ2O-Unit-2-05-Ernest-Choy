@@ -1,8 +1,21 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Ernest
+ * Created on: Sep 2023
+ * This program checks procesor temperature in kelven
 */
 
-basic.showString('Hello, World!')
+let microbitTemperature: number
+
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+basic.pause(1000)
+
+input.onButtonPressed(Button.A, function () {
+  basic.clearScreen()
+  // get microbit temperature and add 273.15 to get it in kelven
+  microbitTemperature = input.temperature() + 273.15
+  basic.showString('the temperature is:' + (microbitTemperature).toString() + ' K.')
+
+  basic.showIcon(IconNames.Yes)
+})
