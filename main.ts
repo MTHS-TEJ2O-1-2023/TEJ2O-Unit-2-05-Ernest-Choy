@@ -17,6 +17,5 @@ input.onButtonPressed(Button.A, function () {
   microbitTemperature = input.temperature()
   microbitTemperature = microbitTemperature + 273.15
   basic.showString('the temperature is:' + microbitTemperature.toString() + ' K.')
-  
   basic.showIcon(IconNames.Yes)
 })
